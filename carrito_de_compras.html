@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Carrito de Compras - Corporación Mayol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#014d8d",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] dark:border-b-gray-700 px-4 sm:px-10 py-3 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-4 text-primary">
+<img src="templates/static/images/corporacion_mayol.png" alt="Logo Corporación Mayol" class="h-8 w-auto">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Corporación Mayol</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#111418] dark:text-gray-300 dark:hover:text-white hover:text-primary text-sm font-medium leading-normal" href="#">Hilos</a>
+<a class="text-[#111418] dark:text-gray-300 dark:hover:text-white hover:text-primary text-sm font-medium leading-normal" href="#">Máquinas de Coser</a>
+<a class="text-[#111418] dark:text-gray-300 dark:hover:text-white hover:text-primary text-sm font-medium leading-normal" href="#">Accesorios</a>
+<a class="text-[#111418] dark:text-gray-300 dark:hover:text-white hover:text-primary text-sm font-medium leading-normal" href="#">Ofertas</a>
+<a class="text-[#111418] dark:text-gray-300 dark:hover:text-white hover:text-primary text-sm font-medium leading-normal" href="#">Contacto</a>
+</div>
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f4] dark:bg-white/10 dark:text-white text-[#111418] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-primary/20 text-primary gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+<button class="md:hidden flex items-center justify-center rounded-lg h-10 bg-[#f0f2f4] dark:bg-white/10 text-[#111418] dark:text-white px-2.5">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-1 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-10">
+<div class="layout-content-container flex flex-col max-w-7xl mx-auto flex-1 gap-8">
+<!-- Breadcrumbs & Heading -->
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<a class="text-[#617589] dark:text-gray-400 hover:text-primary dark:hover:text-primary text-base font-medium leading-normal" href="#">Inicio</a>
+<span class="text-[#617589] dark:text-gray-400 text-base font-medium leading-normal">/</span>
+<span class="text-[#111418] dark:text-white text-base font-medium leading-normal">Carrito de Compras</span>
+</div>
+<div class="flex flex-wrap justify-between gap-3">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Carrito de Compras</p>
+<p class="text-[#617589] dark:text-gray-400 text-base font-normal leading-normal">Revisa tus artículos y procede al pago.</p>
+</div>
+</div>
+</div>
+<!-- Main Content: Cart Items & Summary -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+<!-- Cart Items Table -->
+<div class="lg:col-span-2 overflow-x-auto">
+<div class="flex overflow-hidden rounded-lg border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-background-dark">
+<table class="w-full min-w-[600px]">
+<thead class="bg-[#f6f7f8] dark:bg-white/5">
+<tr>
+<th class="px-4 py-3 text-left text-[#111418] dark:text-white w-2/5 text-sm font-medium leading-normal">Producto</th>
+<th class="px-4 py-3 text-left text-[#111418] dark:text-white w-1/5 text-sm font-medium leading-normal">Precio</th>
+<th class="px-4 py-3 text-left text-[#111418] dark:text-white w-1/5 text-sm font-medium leading-normal">Cantidad</th>
+<th class="px-4 py-3 text-right text-[#111418] dark:text-white w-1/5 text-sm font-medium leading-normal">Total</th>
+<th class="px-4 py-3 text-left text-[#111418] dark:text-white w-auto text-sm font-medium leading-normal"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-t border-t-[#dbe0e6] dark:border-t-gray-700">
+<td class="px-4 py-2">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-16 h-16 shrink-0" data-alt="Bobina de hilo azul" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcuvO0iAa3tr1wYnu-KmHq5p-6hzkICV2ZrretL-69HlOsw5Y96IYQoI00LFu4pa4HEKVG9-sDfylQnCXHvpB3E2g4es0kGSx8A5PRvAgqCJOEzT8ke-sk4U_WVRgiH65DIM1C3QNVwOVHMoPMVlzzAOoqX8jsR0HSmJbmKHRlN3JOpA7nF6GLkBJRAEdK4nPegg47Nkqyo93R2BFnm0MYn8-_hitacwE4UAwNsrIdP0R3b-oSONXHsqrgjSq9UnzgmtRj_6rUZhc");'></div>
+<span class="text-[#111418] dark:text-white text-sm font-medium leading-normal">Hilo de Poliéster Azul Marino</span>
+</div>
+</td>
+<td class="px-4 py-2 text-[#617589] dark:text-gray-300 text-sm font-normal leading-normal">$15.00</td>
+<td class="px-4 py-2">
+<div class="flex items-center border border-gray-200 dark:border-gray-600 rounded-lg w-fit">
+<button class="px-2 py-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary">-</button>
+<input class="w-10 text-center border-0 bg-transparent text-sm text-[#111418] dark:text-white focus:ring-0 p-0" type="text" value="2"/>
+<button class="px-2 py-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary">+</button>
+</div>
+</td>
+<td class="px-4 py-2 text-right text-[#111418] dark:text-white text-sm font-medium leading-normal">$30.00</td>
+<td class="px-4 py-2 text-right">
+<button class="text-[#617589] dark:text-gray-400 hover:text-red-500 dark:hover:text-red-500">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</td>
+</tr>
+<tr class="border-t border-t-[#dbe0e6] dark:border-t-gray-700">
+<td class="px-4 py-2">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-16 h-16 shrink-0" data-alt="Máquina de coser industrial" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA71KrX-5qcMLOipVW7MmfpOpeakBo5GkpJaxj79AUXX3CXkdLrHH0FKEyiRPjxnS6TsLHbnaj3sqYo00KXZdy_RX-kRpkTUJU4KSqAMDVq0hjaPXrGPytbc_ig652utxxT-unSlD3czT6BH7aL7Mz_KwaoSyEMhldEZ1A5zzheVRbflyCU4S_mf16P_UZbBHM8mrELH6mfpC0lh-x5QS3oJrvBqAOEhagCpkeiVfTBmK6s3OyWVHyWf38JHFMN9e6KZZdaAtTkxhs");'></div>
+<span class="text-[#111418] dark:text-white text-sm font-medium leading-normal">Máquina de Coser Industrial</span>
+</div>
+</td>
+<td class="px-4 py-2 text-[#617589] dark:text-gray-300 text-sm font-normal leading-normal">$450.00</td>
+<td class="px-4 py-2">
+<div class="flex items-center border border-gray-200 dark:border-gray-600 rounded-lg w-fit">
+<button class="px-2 py-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary">-</button>
+<input class="w-10 text-center border-0 bg-transparent text-sm text-[#111418] dark:text-white focus:ring-0 p-0" type="text" value="1"/>
+<button class="px-2 py-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary">+</button>
+</div>
+</td>
+<td class="px-4 py-2 text-right text-[#111418] dark:text-white text-sm font-medium leading-normal">$450.00</td>
+<td class="px-4 py-2 text-right">
+<button class="text-[#617589] dark:text-gray-400 hover:text-red-500 dark:hover:text-red-500">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</td>
+</tr>
+<tr class="border-t border-t-[#dbe0e6] dark:border-t-gray-700">
+<td class="px-4 py-2">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-16 h-16 shrink-0" data-alt="Set de agujas de coser" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQC9LFAlKf9vgy45y1i-vQ-MrDUzQ2Vcj06QaVP25AWiPMWoBFhWJrSMwEVwUPdetu_SDjE_l-gNNC7ab71WWQe6rn8ZHlj0NkaA-8yxQjx-SmYVqBwIVVXlaCH9SxZgJagPYMygSB8-Esv7nMjC2pAqxetNUogNpnjl_8j1jz0yvojRx9aKtHU2aoyX2vD9uJ7khc_7-oMt8Ac9lleWdYdkQQgprun3E4rhARQxMoUxwt8aL8bMR24j7abW72kLsokJrEg6fLyDw");'></div>
+<span class="text-[#111418] dark:text-white text-sm font-medium leading-normal">Set de Agujas (10 Unidades)</span>
+</div>
+</td>
+<td class="px-4 py-2 text-[#617589] dark:text-gray-300 text-sm font-normal leading-normal">$5.50</td>
+<td class="px-4 py-2">
+<div class="flex items-center border border-gray-200 dark:border-gray-600 rounded-lg w-fit">
+<button class="px-2 py-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary">-</button>
+<input class="w-10 text-center border-0 bg-transparent text-sm text-[#111418] dark:text-white focus:ring-0 p-0" type="text" value="1"/>
+<button class="px-2 py-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary">+</button>
+</div>
+</td>
+<td class="px-4 py-2 text-right text-[#111418] dark:text-white text-sm font-medium leading-normal">$5.50</td>
+<td class="px-4 py-2 text-right">
+<button class="text-[#617589] dark:text-gray-400 hover:text-red-500 dark:hover:text-red-500">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<a class="inline-flex items-center gap-2 text-primary text-sm font-medium leading-normal pt-4 hover:underline" href="#">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+                Seguir Comprando
+              </a>
+</div>
+<!-- Order Summary -->
+<div class="lg:col-span-1 bg-white dark:bg-background-dark border border-[#dbe0e6] dark:border-gray-700 rounded-lg p-6 flex flex-col gap-6 sticky top-10">
+<h3 class="text-xl font-bold text-[#111418] dark:text-white">Resumen del Pedido</h3>
+<div class="flex flex-col gap-3 border-b border-b-[#dbe0e6] dark:border-b-gray-700 pb-4">
+<div class="flex justify-between">
+<span class="text-[#617589] dark:text-gray-300 text-sm">Subtotal</span>
+<span class="text-[#111418] dark:text-white font-medium text-sm">$485.50</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#617589] dark:text-gray-300 text-sm">Envío</span>
+<span class="text-[#617589] dark:text-gray-400 text-sm">Calculado en el siguiente paso</span>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[#111418] dark:text-white text-lg font-bold">Total</span>
+<span class="text-[#111418] dark:text-white text-xl font-bold">$485.50</span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-lg bg-primary text-white h-12 px-6 text-base font-bold hover:bg-primary/90 transition-colors">
+<span>Proceder al Pago</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

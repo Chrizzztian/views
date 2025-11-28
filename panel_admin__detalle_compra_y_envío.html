@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Panel Admin: Detalle Compra y Envío</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#014d8d",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex h-screen w-64 flex-col border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark/50 sticky top-0">
+<div class="flex flex-col gap-4 p-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Logo de Corporación Mayol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYTOIGd8PspOlI6Gbi6_av6hDj61Ht9VcZrfDRpGigQBeU1FFOLMu3xoZqLtWDgpEl3mMvoJDCKcni5bGDGMjP7LhADwDjDgECECm4y0cDRYc1lnkYwx2nXDHwMAYWM9qL1X9dJcOdoBo25qQAqh2kyulCLfUfRwvDcMtW4cwHm58iE3Ayq_3vDm9ovgFKHRj897OefIRhebMD47I6hdiAx9Aq3rtTHWd7QXWVTE1jf5JgHg8NTJ63i7S3prpYPM2UXDMaTRb_DvU");'></div>
+<div class="flex flex-col">
+<h1 class="text-[#111418] dark:text-white text-base font-medium leading-normal">Corp. Mayol</h1>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Panel de Admin</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#617589] dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">shopping_cart</span>
+<p class="text-sm font-medium leading-normal">Ventas</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#617589] dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<p class="text-sm font-medium leading-normal">Productos</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#617589] dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium leading-normal">Clientes</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#617589] dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<p class="text-sm font-medium leading-normal">Analíticas</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto flex flex-col gap-4 p-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Nuevo Producto</span>
+</button>
+<div class="flex flex-col gap-1 border-t border-gray-200 dark:border-gray-700 pt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#617589] dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Configuración</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#617589] dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Salir</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8">
+<div class="mx-auto max-w-7xl">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 mb-4">
+<a class="text-[#617589] dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="#">Admin</a>
+<span class="text-[#617589] dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<a class="text-[#617589] dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="#">Ventas</a>
+<span class="text-[#617589] dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-[#111418] dark:text-white text-sm font-medium leading-normal">#CM-12345</span>
+</div>
+<!-- PageHeading -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<div class="flex min-w-72 flex-col gap-1">
+<p class="text-[#111418] dark:text-white text-3xl font-bold leading-tight tracking-tight">Detalle de Compra #CM-12345</p>
+<p class="text-[#617589] dark:text-gray-400 text-base font-normal leading-normal">Pedido realizado el 15 de Octubre, 2023</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-[#111418] dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">print</span>
+<span class="truncate">Imprimir Etiqueta</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="material-symbols-outlined text-base">local_shipping</span>
+<span class="truncate">Actualizar Envío</span>
+</button>
+</div>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 mb-8">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-green-100 dark:bg-green-900/50 px-3">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<p class="text-green-800 dark:text-green-300 text-sm font-medium leading-normal">Pago: Pagado</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-orange-100 dark:bg-orange-900/50 px-3">
+<div class="w-2 h-2 rounded-full bg-orange-500"></div>
+<p class="text-orange-800 dark:text-orange-300 text-sm font-medium leading-normal">Envío: En preparación</p>
+</div>
+</div>
+<!-- Main Grid -->
+<div class="grid grid-cols-3 gap-8">
+<div class="col-span-3 lg:col-span-2">
+<!-- Resumen del Pedido -->
+<div class="bg-white dark:bg-background-dark/50 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] p-6 border-b border-gray-200 dark:border-gray-700">Resumen del Pedido</h2>
+<div class="p-6">
+<ul class="space-y-6">
+<!-- Product Item 1 -->
+<li class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Bobina de hilo azul" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG6LM1XhY02Poj9ypWaAV-WzjruJiw-ZNc3sCMxrRWlyfdXtIvmeEEagfRRnSxqyjx5bSdypnnmMPUsXXpwTS2O2k1Fs7b3Zgm6_FSqZId4XOs3TZikl8GmG0beCdSvDPXX-6MO2fUjFO5zQMvhk0TScZU6ThM0PsxH3A7niLtfLykIYX8Ej7YxZoC7t0oobmZzOwnkHDv2OmKvPQyZQ34_XtHLURTT7YSjPXTnaiVhVRJ7XIa_GUmHRTAL4BQT7cqYF2q-zzWL0A"/>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-gray-900 dark:text-white">Hilo de Poliéster Azul Marino</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">SKU: HP-AZ-001</p>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400">2 x $12.50</div>
+<div class="font-semibold text-gray-900 dark:text-white">$25.00</div>
+</li>
+<!-- Product Item 2 -->
+<li class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Bobina de hilo blanco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8wiYaEzJccCHN4kX-lP94EdgkQnoQUpHV2zd2U6JovOVPS15w8koGtk92tzoW97f4823M44uy4QBbpN7U7iVnNyVfpKojg4I2dp6K_gQmFskQvF43K0Oh3VMibIPKFOhRvuqvEkoHMcLUyeked6t0NRSI1nEZ4NbsdEqm7ajsx_OwaijyZfkanNoAZZveLLiQPbF1T8JPeL688fQTUpzRS26hcijxmkMQhV3nq2IWydb-kr3bL_DtHqPvH3LEOE2gbN_z4UoTdQg"/>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-gray-900 dark:text-white">Hilo de Algodón Blanco</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">SKU: HA-BL-005</p>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400">4 x $8.00</div>
+<div class="font-semibold text-gray-900 dark:text-white">$32.00</div>
+</li>
+</ul>
+</div>
+<div class="p-6 border-t border-gray-200 dark:border-gray-700">
+<div class="space-y-3">
+<div class="flex justify-between text-sm">
+<span class="text-gray-500 dark:text-gray-400">Subtotal</span>
+<span class="text-gray-900 dark:text-white">$57.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-gray-500 dark:text-gray-400">Envío</span>
+<span class="text-gray-900 dark:text-white">$10.00</span>
+</div>
+<div class="flex justify-between font-bold text-base">
+<span class="text-gray-900 dark:text-white">Total</span>
+<span class="text-gray-900 dark:text-white">$67.00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-3 lg:col-span-1 space-y-8">
+<!-- Información del Cliente -->
+<div class="bg-white dark:bg-background-dark/50 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] p-6 border-b border-gray-200 dark:border-gray-700">Información del Cliente</h2>
+<div class="p-6 space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-gray-500">person</span>
+</div>
+<div>
+<p class="font-semibold text-gray-900 dark:text-white">Ana Torres</p>
+<a class="text-sm text-primary hover:underline" href="#">Ver historial</a>
+</div>
+</div>
+<div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
+<p class="font-medium text-gray-900 dark:text-white">ana.torres@example.com</p>
+</div>
+<div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Teléfono</p>
+<p class="font-medium text-gray-900 dark:text-white">+1 (555) 123-4567</p>
+</div>
+</div>
+</div>
+<!-- Detalles del Envío -->
+<div class="bg-white dark:bg-background-dark/50 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] p-6 border-b border-gray-200 dark:border-gray-700">Detalles del Envío</h2>
+<div class="p-6 space-y-4">
+<div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Dirección</p>
+<p class="font-medium text-gray-900 dark:text-white">Calle Falsa 123, Apto 4B<br/>Ciudad Gótica, 10101</p>
+</div>
+<div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Método de envío</p>
+<p class="font-medium text-gray-900 dark:text-white">Envío Estándar (3-5 días)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Página de Inicio - Corporación Mayol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 4rem;
+    }
+    /* Infinite scroll animation for hero image */
+    .infinite-scroll-strip { position: relative; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%); }
+    .infinite-scroll-track { display: flex; width: max-content; animation: heroScroll 30s linear infinite; }
+    .infinite-scroll-item { flex: 0 0 auto; width: 48rem; height: 24rem; background-size: cover; background-position: center; }
+    @keyframes heroScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#014d8d",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 dark:border-b-gray-800 px-4 md:px-10 py-3 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-gray-900 dark:text-white">
+<img src="templates/static/images/corporacion_mayol.png" alt="Logo Corporación Mayol" class="h-8 w-auto">
+<h2 class="text-lg font-bold tracking-tight">Corporación Mayol</h2>
+</div>
+<label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex bg-gray-100 dark:bg-gray-800 items-center justify-center pl-3 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined" style="font-size: 20px;">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-gray-100 dark:bg-gray-800 focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Buscar" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-primary" href="catalogo.html">Catálogo</a>
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-primary" href="acerca_de.html">Acerca De</a>
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium hover:text-primary dark:hover:text-primary" href="#contacto">Contacto</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 gap-2 text-sm font-bold min-w-0 px-2.5">
+<img src="templates/static/images/usuario.png" alt="Cuenta" class="h-6 w-6">
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 gap-2 text-sm font-bold min-w-0 px-2.5">
+<img src="templates/static/images/carrito_compras.png" alt="Carrito de compras" class="h-6 w-6">
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-col flex-1">
+<!-- HeroSection - Full Width -->
+<div class="@container" data-aos="fade-up">
+  <!-- Infinite Scroll Animation Strip -->
+  <div class="infinite-scroll-strip" data-alt="Una máquina de coser moderna con hilos de colores vibrantes a su lado">
+      <div class="infinite-scroll-track">
+        <div class="infinite-scroll-item" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtrLeBhHEIF_o7ZUzgTlKsbgzLHf-cEyEv4Z9V4VGLrvcV7MzlI0dqxQlTCcGYGlUHMKvn3VbHEbbny1ydI7rj9ko0MjbpVP3oyGHKw_j5GDN8S9adEaq_NN9S36gXGaiQohgr7saqfSzGRwG81UKbIvHzqPUMKocejeLXV0p-4QKK1H5mo9Oz-lVA5RBf2-5udOWrulLb-Uir2oxFme8y3YGU-7Y8hZUh4tMvIXvRblqij81f20YbLuW-Fu_XwvsjAh-3Z_vPJy8');"></div>
+        <div class="infinite-scroll-item" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3OCpMhlgAXEM6XrPmZZoOASk0gE7PMfu5q5_wexyHRJ-v0W48aC0HCNEX6DloxqG69pdGAe5RXS2HYsi1DABvLbekdG0Ks0vRQLX02X4AbRtSmNVmSunJHASw_H-tKiP2K_42-OUiehQSDwBEAbQwOhHb4K-sAp0m6EkWbYFABnoHuCRd27hesXKRPjChTLi2KzOrPPenh7eRLTcikXQh8Nbk5-55rGE0cCNs8GzgrHfPbO5LmFLLvFS8O7Td1JCtLcbcOqqkMPM');"></div>
+        <div class="infinite-scroll-item" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVWA-po7cMoofhhqAvX0GstcPi2zmOsi0tBFh6rZgIt_3Xj71r1gHqdsDFIRv8aUQV6zsF_GCp94Bf5TgYdZhEc8lsNZ7v3eSt64_HyobwhKRz0yFeYwX64rqABNl-5nGRuWWdRBZKlzz6Y4d0FSnViqNDLjEmLiR2peJtlhpuL0PIRqSw2kSIfGAz0l0gk6uDGfaOrURh23SH8iuVHdWe0h0p6XT6puF5YkyfD9WGy2t1PVlN5KQb8tQOQ6Uf6Wjfb6x0PRGYXOM');"></div>
+        <!-- duplicated items for seamless loop -->
+        <div class="infinite-scroll-item" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtrLeBhHEIF_o7ZUzgTlKsbgzLHf-cEyEv4Z9V4VGLrvcV7MzlI0dqxQlTCcGYGlUHMKvn3VbHEbbny1ydI7rj9ko0MjbpVP3oyGHKw_j5GDN8S9adEaq_NN9S36gXGaiQohgr7saqfSzGRwG81UKbIvHzqPUMKocejeLXV0p-4QKK1H5mo9Oz-lVA5RBf2-5udOWrulLb-Uir2oxFme8y3YGU-7Y8hZUh4tMvIXvRblqij81f20YbLuW-Fu_XwvsjAh-3Z_vPJy8');"></div>
+        <div class="infinite-scroll-item" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3OCpMhlgAXEM6XrPmZZoOASk0gE7PMfu5q5_wexyHRJ-v0W48aC0HCNEX6DloxqG69pdGAe5RXS2HYsi1DABvLbekdG0Ks0vRQLX02X4AbRtSmNVmSunJHASw_H-tKiP2K_42-OUiehQSDwBEAbQwOhHb4K-sAp0m6EkWbYFABnoHuCRd27hesXKRPjChTLi2KzOrPPenh7eRLTcikXQh8Nbk5-55rGE0cCNs8GzgrHfPbO5LmFLLvFS8O7Td1JCtLcbcOqqkMPM');"></div>
+        <div class="infinite-scroll-item" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVWA-po7cMoofhhqAvX0GstcPi2zmOsi0tBFh6rZgIt_3Xj71r1gHqdsDFIRv8aUQV6zsF_GCp94Bf5TgYdZhEc8lsNZ7v3eSt64_HyobwhKRz0yFeYwX64rqABNl-5nGRuWWdRBZKlzz6Y4d0FSnViqNDLjEmLiR2peJtlhpuL0PIRqSw2kSIfGAz0l0gk6uDGfaOrURh23SH8iuVHdWe0h0p6XT6puF5YkyfD9WGy2t1PVlN5KQb8tQOQ6Uf6Wjfb6x0PRGYXOM');"></div>
+      </div>
+  </div>
+  <!-- Description and CTA below the animation -->
+  <div class="flex justify-center px-4 py-5 sm:px-10 md:px-20 lg:px-40">
+    <div class="layout-content-container flex flex-col max-w-7xl flex-1">
+      <div class="flex flex-col gap-4 items-center text-center @[864px]:p-2" data-aos="fade-up">
+        <p class="text-gray-700 dark:text-gray-300 text-base @[480px]:text-lg">Descubre nuestra selección de hilos y máquinas de coser de alto rendimiento para tus proyectos.</p>
+        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-wide hover:bg-primary/90 transition-colors"><span class="truncate">Explorar Colección</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex justify-center px-4 py-5 sm:px-10 md:px-20 lg:px-40">
+<div class="layout-content-container flex flex-col max-w-7xl flex-1">
+<!-- SectionHeader: Categories -->
+<h2 class="text-gray-900 dark:text-white text-2xl font-bold tracking-tight px-4 pb-3 pt-8" data-aos="fade-up">Explora Nuestras Categorías</h2>
+<!-- ImageGrid: Categories -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
+<div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-6 aspect-video relative group overflow-hidden" data-alt="Carretes de hilo de múltiples colores apilados ordenadamente" data-aos="fade-right">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwsELfNptKwI1fSYeglW907ZVw3q19c7Hn-g538fpSQBR9vlk-A5fxu2gjMnu24zxbPG8IlxEo4qJljk1l6GchudQWEJJTmCK7-A-5l3iPOqcBX_tuWToDbW2ifbru57unwf-1SrnK8HKlg9mpJnCBfyCbsemkt-Qx197eLAq7yVNlgIh2fv7yKo2fwlpPpdtm8MceypKCP0RER15rt1-2-ZBN2UbInQ8ZoIKWriXqzDHP-XJuRpckDlu0hQmQbhKR5Z8kb5xy5Hk");'></div>
+<div class="absolute inset-0" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%);"></div>
+<div class="relative z-10">
+<p class="text-white text-xl font-bold leading-tight">Hilos</p>
+</div>
+</div>
+<div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-6 aspect-video relative group overflow-hidden" data-alt="Primer plano de una máquina de coser industrial trabajando sobre tela blanca" data-aos="fade-left">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwsELfNptKwI1fSYeglW907ZVw3q19c7Hn-g538fpSQBR9vlk-A5fxu2gjMnu24zxbPG8IlxEo4qJljk1l6GchudQWEJJTmCK7-A-5l3iPOqcBX_tuWToDbW2ifbru57unwf-1SrnK8HKlg9mpJnCBfyCbsemkt-Qx197eLAq7yVNlgIh2fv7yKo2fwlpPpdtm8MceypKCP0RER15rt1-2-ZBN2UbInQ8ZoIKWriXqzDHP-XJuRpckDlu0hQmQbhKR5Z8kb5xy5Hk");'></div>
+<div class="absolute inset-0" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%);"></div>
+<div class="relative z-10">
+<p class="text-white text-xl font-bold leading-tight">Máquinas de Coser</p>
+</div>
+</div>
+</div>
+<!-- SectionHeader: Featured Products -->
+<h2 class="text-gray-900 dark:text-white text-2xl font-bold tracking-tight px-4 pb-3 pt-12" data-aos="fade-up">Productos Destacados</h2>
+<!-- ProductGrid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+<!-- Product Card 1 -->
+<div class="flex flex-col gap-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+<div class="aspect-square bg-cover bg-center" data-alt="Hilo de poliéster color azul real en un carrete grande" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBchdA_k3FE4vsXyxSvWN3zG21BvUkDoOXJKWKm030MNyEeFh2wB8QSG3FBF4oV7SNeNlt_oEApPv1FwxBJ-olgfwTM4HEtHkXTsAfblvYAMa30Ry_YNmxLYunsg4pHNVHBxSoEWeMbKBTCwGjxsyMinIbTdxVnX_DZpb_jq1FjffvRNd4NpWvfGspY5-dkRzAK9GJ1FfV5aaBIPLWlG4YmIkcoxrQ5RgPnXHpap04GconlqVOQR-P-TyenH3uuOi3KI1TAY6857O4")'></div>
+<div class="flex flex-col gap-2 p-4 pt-0">
+<h3 class="text-gray-800 dark:text-gray-200 text-base font-semibold leading-normal">Hilo de Poliéster</h3>
+<p class="text-primary text-lg font-bold leading-tight">$12.99</p>
+<button class="w-full mt-2 flex cursor-pointer items-center justify-center rounded-md h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-sm font-bold hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Agregar al Carrito</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col gap-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+<div class="aspect-square bg-cover bg-center" data-alt="Máquina de coser digital marca Singer sobre un fondo blanco" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3OCpMhlgAXEM6XrPmZZoOASk0gE7PMfu5q5_wexyHRJ-v0W48aC0HCNEX6DloxqG69pdGAe5RXS2HYsi1DABvLbekdG0Ks0vRQLX02X4AbRtSmNVmSunJHASw_H-tKiP2K_42-OUiehQSDwBEAbQwOhHb4K-sAp0m6EkWbYFABnoHuCRd27hesXKRPjChTLi2KzOrPPenh7eRLTcikXQh8Nbk5-55rGE0cCNs8GzgrHfPbO5LmFLLvFS8O7Td1JCtLcbcOqqkMPM")'></div>
+<div class="flex flex-col gap-2 p-4 pt-0">
+<h3 class="text-gray-800 dark:text-gray-200 text-base font-semibold leading-normal">Máquina de Coser Digital Pro</h3>
+<p class="text-primary text-lg font-bold leading-tight">$299.99</p>
+<button class="w-full mt-2 flex cursor-pointer items-center justify-center rounded-md h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-sm font-bold hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Agregar al Carrito</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col gap-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+<div class="aspect-square bg-cover bg-center" data-alt="Set de hilos de algodón en varios colores pastel" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVWA-po7cMoofhhqAvX0GstcPi2zmOsi0tBFh6rZgIt_3Xj71r1gHqdsDFIRv8aUQV6zsF_GCp94Bf5TgYdZhEc8lsNZ7v3eSt64_HyobwhKRz0yFeYwX64rqABNl-5nGRuWWdRBZKlzz6Y4d0FSnViqNDLjEmLiR2peJtlhpuL0PIRqSw2kSIfGAz0l0gk6uDGfaOrURh23SH8iuVHdWe0h0p6XT6puF5YkyfD9WGy2t1PVlN5KQb8tQOQ6Uf6Wjfb6x0PRGYXOM")'></div>
+<div class="flex flex-col gap-2 p-4 pt-0">
+<h3 class="text-gray-800 dark:text-gray-200 text-base font-semibold leading-normal">Set de Hilos de Algodón</h3>
+<p class="text-primary text-lg font-bold leading-tight">$24.50</p>
+<button class="w-full mt-2 flex cursor-pointer items-center justify-center rounded-md h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-sm font-bold hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Agregar al Carrito</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex flex-col gap-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
+<div class="aspect-square bg-cover bg-center" data-alt="Máquina de coser overlock profesional de color blanco" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDny_eEAq1kWfhN_ufGIMqFLNGocVHCRFhTAOc0p-4WM87HIrqN2wDmpQ6gzRpaCH5nRzSXZbu23ip1lmjgYY1LZJy5-E3tshnx_7h3jATXOuDsxwpXkVKSSttxpP0DiaYjSzrzseEphu4bfmIGkouH4ps2Vlo9IdYetagzEEMTBllB29NQyWTcOqM7ccu2RNA23asBCERZlb-HFUbMpylhqHghT6ecRAUeKU-4vochoTLFIpmZwh45e9wqCU4X08_gLbf06ovB8go")'></div>
+<div class="flex flex-col gap-2 p-4 pt-0">
+<h3 class="text-gray-800 dark:text-gray-200 text-base font-semibold leading-normal">Máquina Overlock Industrial</h3>
+<p class="text-primary text-lg font-bold leading-tight">$450.00</p>
+<button class="w-full mt-2 flex cursor-pointer items-center justify-center rounded-md h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-sm font-bold hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Agregar al Carrito</button>
+</div>
+</div>
+</div>
+<!-- Special Offer Section -->
+<div class="my-16 mx-4 p-8 sm:p-12 rounded-xl bg-primary/20 dark:bg-primary/30 text-center flex flex-col items-center gap-4" data-aos="fade-up">
+<h2 class="text-primary text-3xl font-bold tracking-tight">¡Ofertas del Mes!</h2>
+<p class="text-gray-800 dark:text-gray-200 max-w-2xl">Aprovecha nuestros descuentos especiales en hilos seleccionados y kits de costura. ¡No te pierdas la oportunidad de renovar tus materiales!</p>
+<button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-wide hover:bg-primary/90 transition-colors">
+<span class="truncate">Ver Ofertas</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<main class="flex-1 px-4 sm:px-6 lg:px-8 py-10 md:py-16" data-aos="fade-up" id="contacto">
+<div class="mx-auto max-w-6xl">
+<div class="flex flex-col gap-4 text-center">
+<h1 class="text-gray-900 dark:text-white text-4xl md:text-5xl font-black tracking-tighter">Contáctanos</h1>
+<p class="text-gray-600 dark:text-gray-400 md:text-lg max-w-2xl mx-auto">
+                            Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de cualquiera de los siguientes medios o envíanos un mensaje directamente.
+                        </p>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-8">
+<div class="lg:col-span-2 flex flex-col gap-8" data-aos="fade-right">
+<div>
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">Información de Contacto</h2>
+<div class="flex flex-col divide-y divide-gray-200 dark:divide-gray-800">
+<div class="flex items-center gap-4 py-4">
+<div class="text-gray-800 dark:text-gray-200 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/10 shrink-0 size-12">
+<span class="material-symbols-outlined">phone</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Teléfono</p>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">+1 (555) 123-4567</p>
+</div>
+</div>
+<div class="flex items-center gap-4 py-4">
+<div class="text-gray-800 dark:text-gray-200 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/10 shrink-0 size-12">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Correo Electrónico</p>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">ventas@corporacionmayol.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4 py-4">
+<div class="text-gray-800 dark:text-gray-200 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/10 shrink-0 size-12">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Dirección</p>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Av. Principal 123, Ciudad, País</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">Encuéntranos</h2>
+<div class="aspect-video w-full overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800">
+<img class="w-full h-full object-cover" data-alt="Mapa mostrando una ubicación en una ciudad." data-location="Ciudad, País" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_sX7uYvKOxXHcyWXRS4G_OI0PrFSdkPk36_jf3r9y1EAroOh9AX6yt2qpV9e8RejO-D6R_SjHKugEHwHId3_uX1desC5TeP3LASHKFug3wfvZBSYIrptoMzG92oTTSqZSKZ0J9aiiWR7AvjJrht4yGDvPvEg18rVRRiRB0n05KBumqeWekr8FzH0NOOsw_6esgOtf_YwuxH6HmiFkxSp1LRpk2Kq0ldjY_rhCb5if2zhZjbajwkYRF1_9BT_NKPJHqYdOAb4zURs"/>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3" data-aos="fade-left">
+<div class="bg-white dark:bg-background-dark/50 p-6 sm:p-8 rounded-xl border border-gray-200 dark:border-gray-800">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5">Envíanos un Mensaje</h2>
+<form class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<div class="sm:col-span-1">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5" for="name">Nombre Completo</label>
+<input class="block w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-11" id="name" name="name" placeholder="Tu nombre" type="text"/>
+</div>
+<div class="sm:col-span-1">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5" for="email">Correo Electrónico</label>
+<input class="block w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-11" id="email" name="email" placeholder="tu@correo.com" type="email"/>
+</div>
+<div class="sm:col-span-2">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5" for="subject">Asunto</label>
+<input class="block w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-11" id="subject" name="subject" placeholder="Asunto de tu mensaje" type="text"/>
+</div>
+<div class="sm:col-span-2">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5" for="message">Mensaje</label>
+<textarea class="block w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="message" name="message" placeholder="Escribe tu mensaje aquí..." rows="5"></textarea>
+</div>
+<div class="sm:col-span-2">
+<button class="w-full flex items-center justify-center rounded-lg bg-primary px-4 py-3 text-sm font-bold text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-colors" type="submit">Enviar Mensaje</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+<div class="col-span-full lg:col-span-1">
+<div class="flex items-center gap-2 text-gray-900 dark:text-white">
+<img src="templates/static/images/corporacion_mayol.png" alt="Logo Corporación Mayol" class="h-7 w-auto">
+<h2 class="text-base font-bold">Corporación Mayol</h2>
+</div>
+<p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Calidad y precisión para todos tus proyectos de costura.</p>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Enlaces</h3>
+<ul class="mt-4 space-y-2" role="list">
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Hilos</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Máquinas de Coser</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Ofertas</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Ayuda</h3>
+<ul class="mt-4 space-y-2" role="list">
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">FAQ</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Envíos y Devoluciones</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Términos y Condiciones</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Contacto</h3>
+<ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400" role="list">
+<li><p>Dirección, Ciudad</p></li>
+<li><p>email@corporacionmayol.com</p></li>
+<li><p>+123 456 7890</p></li>
+</ul>
+</div>
+<div class="col-span-full md:col-span-2 lg:col-span-1">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Newsletter</h3>
+<p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Suscríbete para recibir ofertas y novedades.</p>
+<form class="mt-4 flex gap-2">
+<input class="form-input w-full rounded-md border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:ring-primary focus:border-primary" placeholder="Tu correo electrónico" type="email"/>
+<button class="bg-primary text-white px-3 py-2 rounded-md text-sm font-bold hover:bg-primary/90" type="submit">
+<span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+<div class="mt-12 border-t border-gray-200 dark:border-gray-800 pt-8 text-center text-sm text-gray-500 dark:text-gray-400">
+<p>© 2025 Corporación Mayol. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+<!-- Back to top button -->
+<a href="#" class="fixed bottom-6 right-6 z-50 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-600">
+<img src="templates/static/images/flecha.png" alt="Volver arriba" class="w-10 h-10">
+</a>
+</div>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: false,
+    mirror: true
+  });
+</script>
+</body></html>

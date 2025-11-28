@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catálogo de Productos - Corporación Mayol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#014d8d",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between whitespace-nowrap h-16">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<img src="templates/static/images/corporacion_mayol.png" alt="Logo Corporación Mayol" class="h-8 w-auto">
+<h2 class="text-lg font-bold tracking-[-0.015em]">Corporación Mayol</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-sm font-medium text-primary dark:text-primary" href="#">Catálogo</a>
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Nosotros</a>
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Contacto</a>
+</nav>
+<div class="flex flex-1 justify-end items-center gap-4">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVQWPfjhS06NwSVskCQ2NJLaYcD7NMJuD8YZM2Ej16wNmLwJRSCRGDxrMxClrAlYlVebisATou8I7NyOVpfhemoI6vAqRhTAipER6iW23ldCplF8_Cy3Jnc6xhxBTA733KBcv3fG2bMoYxr1gwWVq2BGiOP6iYrXq2nAAetn1CCpWsjfoHS1Z5jEolJNW2vDheRfifC8jIUEC57zB_xSmlHi_wTg1EZgX3hWKndqhTPnB6Uo4Rm_z1yle6rutAKHcqDqoH3zSFCFU");'></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-1/4 xl:w-1/5">
+<div class="sticky top-24 space-y-6">
+<!-- Search Bar -->
+<div>
+<h3 class="text-lg font-bold tracking-[-0.015em] mb-3 text-gray-900 dark:text-white">Buscar</h3>
+<label class="flex flex-col h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex bg-white dark:bg-background-dark items-center justify-center pl-4 rounded-l-lg border border-gray-300 dark:border-gray-700 border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary border-gray-300 dark:border-gray-700 bg-white dark:bg-background-dark h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal" placeholder="Buscar por palabra clave" value=""/>
+</div>
+</label>
+</div>
+<!-- Accordion Filters -->
+<div class="bg-white dark:bg-background-dark rounded-xl p-4 border border-gray-200 dark:border-gray-800">
+<details class="flex flex-col border-b border-b-gray-200 dark:border-b-gray-700 py-2 group" open="">
+<summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-2">
+<p class="text-sm font-medium text-gray-900 dark:text-white">Tipo de Producto</p>
+<div class="text-gray-600 dark:text-gray-400 group-open:rotate-180 transition-transform">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</summary>
+<div class="text-sm font-normal text-gray-600 dark:text-gray-400 pt-2 space-y-3">
+<label class="flex items-center space-x-2 cursor-pointer"><input checked="" class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/><span>Hilos</span></label>
+<label class="flex items-center space-x-2 cursor-pointer"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/><span>Máquinas de Coser</span></label>
+<label class="flex items-center space-x-2 cursor-pointer"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/><span>Agujas</span></label>
+</div>
+</details>
+<details class="flex flex-col border-b border-b-gray-200 dark:border-b-gray-700 py-2 group">
+<summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-2">
+<p class="text-sm font-medium text-gray-900 dark:text-white">Marca</p>
+<div class="text-gray-600 dark:text-gray-400 group-open:rotate-180 transition-transform">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</summary>
+<div class="text-sm font-normal text-gray-600 dark:text-gray-400 pt-2 space-y-3">
+<label class="flex items-center space-x-2 cursor-pointer"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/><span>Marca X</span></label>
+<label class="flex items-center space-x-2 cursor-pointer"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/><span>Marca Y</span></label>
+<label class="flex items-center space-x-2 cursor-pointer"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/><span>Marca Z</span></label>
+</div>
+</details>
+<div class="flex flex-col py-4">
+<p class="text-sm font-medium text-gray-900 dark:text-white mb-3">Rango de Precio</p>
+<input class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer [&amp;::-webkit-slider-thumb]:bg-primary" max="1000" min="0" type="range"/>
+<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2"><span>$0</span><span>$1000+</span></div>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:bg-primary/90 transition-colors">
+                Aplicar Filtros
+            </button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="w-full lg:w-3/4 xl:w-4/5">
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+<h1 class="text-4xl font-black tracking-[-0.033em] text-gray-900 dark:text-white">Nuestro Catálogo</h1>
+<div class="flex items-center gap-2">
+<span class="text-sm text-gray-600 dark:text-gray-400">Ordenar por:</span>
+<select class="form-select rounded-lg border-gray-300 dark:border-gray-700 bg-white dark:bg-background-dark focus:border-primary focus:ring-primary/50 text-sm">
+<option>Relevancia</option>
+<option>Precio: Menor a Mayor</option>
+<option>Precio: Mayor a Menor</option>
+</select>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col group transition-shadow hover:shadow-lg">
+<div class="aspect-square w-full bg-cover bg-center" data-alt="White sewing machine" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrwkPncHAZcEihb7B7ilS73ZYoS2pwiCXXaPKtHxSrpvI7jctHTbWy0CK2w6hiVF50F6jBerWhofZr-TwbhMsI9HcRwnEzwwf-7FHLjmIYW0FpUOKKz0JeF9n0Rno1c5CYsGLY_nvBdYOTk3NItC-6p-86N5tzyrM68PSHpxsuaTIe0XwXtsQPnV05CBCs60ckzy5Ti7O29eZJYwp4zIrsXy-kLAUqwx-PQZbO272VVZ9YpFQiphyj7Ne9QJdgEwaZXXCL71Ipah4')"></div>
+<div class="p-4 flex flex-col flex-grow">
+<h4 class="font-bold text-lg text-gray-900 dark:text-white">Máquina de Coser Pro</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Marca Y</p>
+<p class="text-xl font-black text-primary mt-auto">$250.00</p>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-none h-12 bg-primary/20 text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                    Añadir al Carrito
+                </button>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col group transition-shadow hover:shadow-lg">
+<div class="aspect-square w-full bg-cover bg-center" data-alt="Colorful spools of thread" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0hXAglYO3ttVV7W33sn9vHp5Pw3v4LCQzMDwCT69SG4E0OL7_ZGdb9TgbdIMPI9U3GUYVv9UmwPRbuFhN4g1l_buE2xsVqcP_8eAbDh9MIghL1QLWSZe32xwrr_u9v3RhMEfcCZ-MOqd7w9uNQqDDHZTM_E-aKVGzUlLxJ9NMcKqkSb1sbEAzT7bOy-PosC81noiwMyncY4_IPVjj4UxV_2MTiQ4eRi2gbHYtOrMPzEV1sQimo7DVcQbNyFWkALY1Io2eX-rdoUg')"></div>
+<div class="p-4 flex flex-col flex-grow">
+<h4 class="font-bold text-lg text-gray-900 dark:text-white">Hilo de Poliéster 120/2</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Marca X</p>
+<p class="text-xl font-black text-primary mt-auto">$5.50</p>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-none h-12 bg-primary/20 text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                    Añadir al Carrito
+                </button>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col group transition-shadow hover:shadow-lg">
+<div class="aspect-square w-full bg-cover bg-center" data-alt="Black vintage sewing machine" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0VCZkhPb68ridjtoxSniey4vn-R_PlRkBkfC9dwHT_MFJqjKc909HCIejpFSqoZsDP6hIVc4p_HF2ry9Chtt1nG4IHmZZfL0yYqDP6egr-G3gKXeDh6gEN_FGsF5C7sq0_dm2kmjP8dhQ10r6fcK3XshBeBw0QYTelXyK9-Oz4ezKMDZiANAQPNXKNf_pFagelbb-ccgseQx-IwgLOivN04ek8x6vFm2zN7lBk1n8HDP4gxKe-rMmjCTVrW6QdWZTYzzmy495m5Q')"></div>
+<div class="p-4 flex flex-col flex-grow">
+<h4 class="font-bold text-lg text-gray-900 dark:text-white">Máquina Clásica</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Marca Z</p>
+<p class="text-xl font-black text-primary mt-auto">$180.00</p>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-none h-12 bg-primary/20 text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                    Añadir al Carrito
+                </button>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col group transition-shadow hover:shadow-lg">
+<div class="aspect-square w-full bg-cover bg-center" data-alt="Spool of red thread" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAp7PVM_nvV06BCyfSyrrtesElOTRwiIUhBTSXeXuA2fQVHClrFYwBToXyaFYhWmRunUaYgHjQzT3ukdnbRp5p9f61cWmmsIGRGSN1VA2IRJq_oev8lLbfH-ct_oD-FocUYz-kJBsgxjNBnfOUM1OZAtCYxOYrhZhc0AnPoCFc2X_LYV3JB1Gb7ba7W6hcTGmrHQLkmhwEEdVjkINBb3BdEJjpBRtDm3FHE18rnzzWstk-wsHqYO3HAO5kxX-KyYuXspgdt4DfsWSg')"></div>
+<div class="p-4 flex flex-col flex-grow">
+<h4 class="font-bold text-lg text-gray-900 dark:text-white">Hilo de Algodón Rojo</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Marca X</p>
+<p class="text-xl font-black text-primary mt-auto">$7.00</p>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-none h-12 bg-primary/20 text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                    Añadir al Carrito
+                </button>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col group transition-shadow hover:shadow-lg">
+<div class="aspect-square w-full bg-cover bg-center" data-alt="Close up of a sewing machine needle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXruUe9A-AmlFw8pM3roIjyTRa0xeqF88eNf2EkUDpP2RDLr3ezdjaYQzGsTsDUNgfp71fgswwoexE1c2RAbluNG7LqCr9WVpaELc6y6c5q-pli1VN2Wru1IfygZ3JRus2qxwgCy9n1UKT6PxqpLyJRwtRAiC2K7X7OnwmPbgJyLGnwgzZOh-fnIHRGwe2kuU6at_j3UGr1P01TjQJpi8x0XT8pE81JL78mI3gRXrlj6it_Z6gLmKYpXicu6xt_NV8D53YHSKLLKg')"></div>
+<div class="p-4 flex flex-col flex-grow">
+<h4 class="font-bold text-lg text-gray-900 dark:text-white">Máquina Industrial 2.0</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Marca Y</p>
+<p class="text-xl font-black text-primary mt-auto">$550.00</p>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-none h-12 bg-primary/20 text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                    Añadir al Carrito
+                </button>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col group transition-shadow hover:shadow-lg">
+<div class="aspect-square w-full bg-cover bg-center" data-alt="Spool of blue thread" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkj436se9xkKhtkp9KwRFyCM_QSvtIXMtp492YiszG5jmxUKcZHtNFcBJy9exms6FdWxqHNeGYuX4-k0d_XnnFgq4uHRa1hMDo_Fa4XV5oFcditQEcR4DmTpTGqvg-j8u2osdPm4Ck9nGZdt3rr5nrOnFtUZNxhqifnPYyzjtx123caxyu6nkp29ZswpYFLZ-ByU7gZvptIM5Rb_spMT5_NMy3ZElaTuI11BY8LJFyGOSHqCHQ6UF_7scqHj2RX0TIMYGyaBv6XKM')"></div>
+<div class="p-4 flex flex-col flex-grow">
+<h4 class="font-bold text-lg text-gray-900 dark:text-white">Hilo de Seda Azul</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Marca X</p>
+<p class="text-xl font-black text-primary mt-auto">$12.25</p>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-none h-12 bg-primary/20 text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                    Añadir al Carrito
+                </button>
+</div>
+</div>
+<!-- Pagination -->
+<nav class="flex items-center justify-center gap-2 mt-10">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary text-white font-bold text-sm">1</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 font-bold text-sm">2</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 font-bold text-sm">3</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</main>
+</div>
+</body></html>

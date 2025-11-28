@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detalle de Producto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#014d8d",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex w-full items-center justify-center border-b border-solid border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark px-4 sm:px-6 lg:px-8">
+<div class="flex w-full max-w-7xl items-center justify-between whitespace-nowrap py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<img src="templates/static/images/corporacion_mayol.png" alt="Logo Corporación Mayol" class="h-8 w-auto">
+<h2 class="text-lg font-bold tracking-tight text-gray-900 dark:text-white">Corporación Mayol</h2>
+</div>
+<nav class="hidden items-center gap-9 lg:flex">
+<a class="text-sm font-medium text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Hilos</a>
+<a class="text-sm font-medium text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Máquinas de Coser</a>
+<a class="text-sm font-medium text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Accesorios</a>
+<a class="text-sm font-medium text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Ofertas</a>
+</nav>
+</div>
+<div class="flex flex-1 items-center justify-end gap-4">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex h-full w-full flex-1 items-stretch rounded-lg">
+<div class="text-gray-500 dark:text-gray-400 flex items-center justify-center rounded-l-lg border-y border-l border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark pl-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-background-dark text-gray-900 dark:text-white h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-3 text-sm font-normal focus:border-primary focus:ring-primary" placeholder="Buscar productos..." value=""/>
+</div>
+</label>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex w-full flex-1 justify-center px-4 py-8 sm:px-6 lg:px-8">
+<div class="flex w-full max-w-7xl flex-col gap-8">
+<div class="flex flex-wrap gap-2 text-sm">
+<a class="font-medium text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Inicio</a>
+<span class="text-gray-400 dark:text-gray-500">/</span>
+<a class="font-medium text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Hilos</a>
+<span class="text-gray-400 dark:text-gray-500">/</span>
+<span class="font-medium text-gray-800 dark:text-white">Hilo de Algodón XYZ</span>
+</div>
+<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+<div class="flex flex-col-reverse gap-4 md:flex-row">
+<div class="flex gap-4 md:flex-col md:gap-2">
+<div class="w-full cursor-pointer overflow-hidden rounded-lg border-2 border-primary aspect-square flex-1" data-alt="Vista de cerca del Hilo de Algodón XYZ en un fondo blanco">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwsELfNptKwI1fSYeglW907ZVw3q19c7Hn-g538fpSQBR9vlk-A5fxu2gjMnu24zxbPG8IlxEo4qJljk1l6GchudQWEJJTmCK7-A-5l3iPOqcBX_tuWToDbW2ifbru57unwf-1SrnK8HKlg9mpJnCBfyCbsemkt-Qx197eLAq7yVNlgIh2fv7yKo2fwlpPpdtm8MceypKCP0RER15rt1-2-ZBN2UbInQ8ZoIKWriXqzDHP-XJuRpckDlu0hQmQbhKR5Z8kb5xy5Hk");'></div>
+</div>
+<div class="w-full cursor-pointer overflow-hidden rounded-lg border-2 border-transparent hover:border-primary/50 aspect-square flex-1" data-alt="Varios rollos de Hilo de Algodón XYZ apilados">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwsELfNptKwI1fSYeglW907ZVw3q19c7Hn-g538fpSQBR9vlk-A5fxu2gjMnu24zxbPG8IlxEo4qJljk1l6GchudQWEJJTmCK7-A-5l3iPOqcBX_tuWToDbW2ifbru57unwf-1SrnK8HKlg9mpJnCBfyCbsemkt-Qx197eLAq7yVNlgIh2fv7yKo2fwlpPpdtm8MceypKCP0RER15rt1-2-ZBN2UbInQ8ZoIKWriXqzDHP-XJuRpckDlu0hQmQbhKR5Z8kb5xy5Hk");'></div>
+</div>
+<div class="w-full cursor-pointer overflow-hidden rounded-lg border-2 border-transparent hover:border-primary/50 aspect-square flex-1" data-alt="Detalle de la textura y fibra del Hilo de Algodón XYZ">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwsELfNptKwI1fSYeglW907ZVw3q19c7Hn-g538fpSQBR9vlk-A5fxu2gjMnu24zxbPG8IlxEo4qJljk1l6GchudQWEJJTmCK7-A-5l3iPOqcBX_tuWToDbW2ifbru57unwf-1SrnK8HKlg9mpJnCBfyCbsemkt-Qx197eLAq7yVNlgIh2fv7yKo2fwlpPpdtm8MceypKCP0RER15rt1-2-ZBN2UbInQ8ZoIKWriXqzDHP-XJuRpckDlu0hQmQbhKR5Z8kb5xy5Hk");'></div>
+</div>
+<div class="w-full cursor-pointer overflow-hidden rounded-lg border-2 border-transparent hover:border-primary/50 aspect-square flex-1" data-alt="Hilo de Algodón XYZ utilizado en una máquina de coser">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwsELfNptKwI1fSYeglW907ZVw3q19c7Hn-g538fpSQBR9vlk-A5fxu2gjMnu24zxbPG8IlxEo4qJljk1l6GchudQWEJJTmCK7-A-5l3iPOqcBX_tuWToDbW2ifbru57unwf-1SrnK8HKlg9mpJnCBfyCbsemkt-Qx197eLAq7yVNlgIh2fv7yKo2fwlpPpdtm8MceypKCP0RER15rt1-2-ZBN2UbInQ8ZoIKWriXqzDHP-XJuRpckDlu0hQmQbhKR5Z8kb5xy5Hk");'></div>
+</div>
+</div>
+<div class="w-full overflow-hidden rounded-xl aspect-square flex-1">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat" data-alt="Imagen principal del Hilo de Algodón XYZ" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDn5MEYiQxiHpD8rRZ9d4AvaY-0jTFyJou_iozE02HtcBRjkWQr33O8eik19-mhm2Hb6rjbV6D8aTfBzFNt3rW7Jx0RoYPqIKCDf6l__ljiHrHWsLCZlNo_sP7CStQmGa_pNwCnE1ZuyN7uRciV0gsOT2yUE79gmtzFDJ4wOWECk6b-FQVGv3wWM5xWV5WLC-y-JNB25s-RVmLw0KT-0sLaQo3fmNpzbvF-2MuenxBJ3212q3RwBAusQUOX7g57z3Xc-6mBGicbWzM");'></div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-4xl font-black tracking-tighter text-gray-900 dark:text-white">Hilo de Algodón XYZ</h1>
+<p class="text-base font-medium text-gray-500 dark:text-gray-400">SKU: HM-12345</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="rounded-full bg-emerald-100 dark:bg-emerald-900 px-3 py-1 text-sm font-medium text-emerald-700 dark:text-emerald-300">En stock</span>
+</div>
+<p class="text-4xl font-bold text-gray-900 dark:text-white">$12.50</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300">Cantidad:</label>
+<div class="flex items-center rounded-lg border border-gray-300 dark:border-gray-600">
+<button class="flex h-10 w-10 items-center justify-center text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-l-md">-</button>
+<input class="h-10 w-12 border-x border-gray-300 dark:border-gray-600 bg-white dark:bg-background-dark text-center font-medium text-gray-900 dark:text-white focus:outline-none" type="text" value="1"/>
+<button class="flex h-10 w-10 items-center justify-center text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-r-md">+</button>
+</div>
+</div>
+<button class="flex h-12 w-full max-w-xs cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary px-6 text-base font-bold text-white shadow-sm hover:bg-primary/90">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+<span>Añadir al carrito</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full border-t border-gray-200 dark:border-gray-700 pt-8">
+<div class="flex border-b border-gray-200 dark:border-gray-700">
+<button class="px-4 py-3 text-sm font-semibold border-b-2 border-primary text-primary">Descripción</button>
+<button class="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white border-b-2 border-transparent">Especificaciones Técnicas</button>
+<button class="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white border-b-2 border-transparent">Reseñas (3)</button>
+</div>
+<div class="prose prose-sm max-w-none py-6 text-gray-600 dark:text-gray-300">
+<p>Descubre la calidad superior de nuestro Hilo de Algodón XYZ, perfecto para todo tipo de proyectos de costura, desde prendas de vestir hasta manualidades decorativas. Fabricado con 100% algodón mercerizado, este hilo ofrece una resistencia excepcional y un brillo sutil que realzará tus creaciones. Su torsión equilibrada previene enredos y roturas, garantizando una experiencia de costura suave y sin interrupciones, tanto a mano como a máquina. Disponible en una amplia gama de colores vibrantes y duraderos que no se desvanecen con los lavados.</p>
+</div>
+</div>
+<div class="w-full pt-8">
+<h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">Productos Relacionados</h3>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+<div class="flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+<a class="block aspect-[4/3] overflow-hidden" href="#">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 hover:scale-105" data-alt="Hilos de seda en varios colores" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA53dFjgkhM3GvczNfguw7RY4b0nRaSXkX8YLPB4cZK1j50hXeEUaj74e1ldhz-jAmz7qR-7OWvvh1zwx5-LdoIFzJk4mem6mxjzc3rW4OkwtMsIjNXvVn4VBvnUFyTZQIGuEtfgSGkTDuOfRd9l8LMwzzarQf0u2Fcoixdhx-6UiAfzymEMbApSSeJlrszf2loFUqiGbLHGm-d0v4xaMizFqdJdtNM5YQ2kcfLCWizY9Sa2c_UgIJg3BXoRYMPF1xnx72zfWl-p-A");'></div>
+</a>
+<div class="flex flex-1 flex-col p-4">
+<h4 class="text-base font-semibold text-gray-800 dark:text-white">Hilo de Seda Premium</h4>
+<p class="mt-2 text-lg font-bold text-gray-900 dark:text-white">$18.00</p>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+<a class="block aspect-[4/3] overflow-hidden" href="#">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 hover:scale-105" data-alt="Agujas de coser de diferentes tamaños" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmyUxnUJZJUIe-JN2sj7nAOy1nHK5IlahlwNb9NRcfGR9YLNvsIo2KThP02En4H8KzViFPFI13gvsCIlF8NFDZv_riQMFfAp-QAmKahHwJhWypY0ax5nIn_6kC_NTR0jzr3zJz5oOoGboRJVfIejm2EpKLyL3qK156bzbuF1y5K2Bvbpx0FJZUjpkpJXfKFYyeMHEbQjId8_EoODUUuRTHcPUgwvLgUF4WWMAYNsYACKUffb5DA3wSYmwKVLdZ8P_sBDHBdhCFs40");'></div>
+</a>
+<div class="flex flex-1 flex-col p-4">
+<h4 class="text-base font-semibold text-gray-800 dark:text-white">Set de Agujas Universal</h4>
+<p class="mt-2 text-lg font-bold text-gray-900 dark:text-white">$7.50</p>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+<a class="block aspect-[4/3] overflow-hidden" href="#">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 hover:scale-105" data-alt="Tijeras de sastre profesionales sobre una tela" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcgACRV9GYaP-5k3htfaZqQ7vCHufVIipIu-h4WQhIfPJIORJoqRIs9pZdy6LUASdQ0i7pCDI_B39jmgyKO7SJDATneHBZKbS_Wi6-XmO_hj1hJ6g_VkBNV9oWmw7VkbtFCQAzM905Q52Lu2yceT_cBTAIlmha_Z7VE7jQlWHanVGw4wg-5zC4a0X9Toi4hO7clQOe4qxSIL6YbyMRjWK7jBxz__WgTKKkRUqSquEXmb3-k_A-R5lE2W81ENvsAaPy3qle5r7mpv0");'></div>
+</a>
+<div class="flex flex-1 flex-col p-4">
+<h4 class="text-base font-semibold text-gray-800 dark:text-white">Tijeras de Sastre Pro</h4>
+<p class="mt-2 text-lg font-bold text-gray-900 dark:text-white">$25.00</p>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+<a class="block aspect-[4/3] overflow-hidden" href="#">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 hover:scale-105" data-alt="Máquina de coser moderna blanca" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_CNNaTz-pjqtbmLBUcXbuyuatm1KDj5XsLwM53ftxaGNO1ba0bDDsSf0_65ss8VSN_jMf2kCNCIyLPNp9Rv4kBmi5-zrnIakYhkMTWihFknllFdd2tXZnjXAuPsU10yjvQZGqmtW_oldOtRc8yKml8MYjpL8mfT641HVOHvrXQLnr9kGbpORY9QOSNiZAm6QwhOuMnUwkH7bEJXwJFQH_3iF1hEe6Y146clGnnHKGUTeZ-TOv035bORTnDz4rPvAzVEf1d2rpyt8");'></div>
+</a>
+<div class="flex flex-1 flex-col p-4">
+<h4 class="text-base font-semibold text-gray-800 dark:text-white">Máquina de Coser Singer</h4>
+<p class="mt-2 text-lg font-bold text-gray-900 dark:text-white">$199.99</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 text-gray-900 dark:text-white">
+<img src="templates/static/images/corporacion_mayol.png" alt="Logo Corporación Mayol" class="h-8 w-auto">
+<h2 class="text-lg font-bold">Corporación Mayol</h2>
+</div>
+<p class="mt-4 text-sm text-gray-500 dark:text-gray-400">Su socio de confianza en hilos y máquinas de coser desde 1985.</p>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Tienda</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Hilos</a></li>
+<li><a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Máquinas</a></li>
+<li><a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Accesorios</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Soporte</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Contacto</a></li>
+<li><a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Envíos</a></li>
+<li><a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Devoluciones</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white">Legal</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Términos</a></li>
+<li><a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Privacidad</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-gray-200 dark:border-gray-800 pt-8">
+<p class="text-sm text-gray-500 dark:text-gray-400 text-center">© 2024 Corporación Mayol. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
